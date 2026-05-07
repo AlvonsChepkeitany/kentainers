@@ -1,0 +1,23 @@
+{
+  "overview": "High-end industrial e-commerce web app for Kentainers — a Kenyan water tank and storage solutions company. Features a full product catalog with 12 SKUs, real-time search, capacity calculator, and WhatsApp-powered checkout.",
+  "features": [
+    "12-product catalog with pricing, savings badges, and styled SVG images",
+    "Real-time search filtering by product name and capacity",
+    "Shopping cart with localStorage persistence across page refreshes",
+    "Capacity calculator tool for household tank recommendations",
+    "WhatsApp checkout workflow with formatted order message",
+    "Mobile-first design with bottom nav bar and sticky glassmorphism header",
+    "Industrial premium design: Navy, Safety Orange, Montserrat + Roboto typography"
+  ],
+  "category": "e-commerce",
+  "tags": [
+    "e-commerce",
+    "industrial",
+    "water-tanks",
+    "kenya",
+    "mobile-first",
+    "whatsapp-checkout",
+    "product-catalog"
+  ],
+  "last_updated": "2026-05-07T18:35:21.349Z"
+}

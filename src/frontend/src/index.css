@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @font-face {
+      font-family: "Montserrat";
+      src: url("/assets/fonts/Montserrat.woff2") format("woff2");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Roboto";
+      src: url("/assets/fonts/Roboto.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    --font-display: "Montserrat", sans-serif;
+    --font-body: "Roboto", sans-serif;
+    --font-mono: monospace;
+    --radius: 0.625rem;
+
+    --background: 0.99 0 0;
+    --foreground: 0.18 0.15 279;
+    --card: 0.98 0 0;
+    --card-foreground: 0.18 0.15 279;
+    --popover: 0.98 0 0;
+    --popover-foreground: 0.18 0.15 279;
+
+    --primary: 0.18 0.15 279;
+    --primary-foreground: 0.99 0 0;
+
+    --secondary: 0.62 0.24 63;
+    --secondary-foreground: 0.99 0 0;
+    --muted: 0.93 0 0;
+    --muted-foreground: 0.55 0 0;
+
+    --accent: 0.68 0.21 141;
+    --accent-foreground: 0.99 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.88 0 0;
+    --input: 0.95 0 0;
+    --ring: 0.62 0.24 63;
+
+    --chart-1: 0.62 0.24 63;
+    --chart-2: 0.68 0.21 141;
+    --chart-3: 0.18 0.15 279;
+    --chart-4: 0.78 0.19 84;
+    --chart-5: 0.55 0.15 22;
+
+    --sidebar: 0.99 0 0;
+    --sidebar-foreground: 0.18 0.15 279;
+    --sidebar-primary: 0.18 0.15 279;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.62 0.24 63;
+    --sidebar-accent-foreground: 0.99 0 0;
+    --sidebar-border: 0.88 0 0;
+    --sidebar-ring: 0.62 0.24 63;
+  }
+
+  .dark {
+    --background: 0.13 0 0;
+    --foreground: 0.92 0 0;
+    --card: 0.16 0 0;
+    --card-foreground: 0.92 0 0;
+    --popover: 0.19 0 0;
+    --popover-foreground: 0.92 0 0;
+
+    --primary: 0.68 0.12 279;
+    --primary-foreground: 0.13 0 0;
+
+    --secondary: 0.68 0.24 63;
+    --secondary-foreground: 0.13 0 0;
+    --muted: 0.28 0 0;
+    --muted-foreground: 0.65 0 0;
+
+    --accent: 0.72 0.18 141;
+    --accent-foreground: 0.13 0 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.13 0 0;
+
+    --border: 0.26 0 0;
+    --input: 0.26 0 0;
+    --ring: 0.68 0.24 63;
+
+    --chart-1: 0.49 0.24 264;
+    --chart-2: 0.7 0.17 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.63 0.27 304;
+    --chart-5: 0.65 0.25 16;
+
+    --sidebar: 0.18 0 0;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.8 0 0;
+    --sidebar-primary-foreground: 0.145 0 0;
+    --sidebar-accent: 0.22 0 0;
+    --sidebar-accent-foreground: 0.85 0 0;
+    --sidebar-border: 0.28 0 0;
+    --sidebar-ring: 0.8 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .shadow-elevated {
+    box-shadow: 0 20px 25px -5px rgba(0, 33, 71, 0.15), 0 10px 10px -5px
+      rgba(0, 33, 71, 0.1);
+  }
+  .shadow-subtle {
+    box-shadow: 0 1px 3px rgba(0, 33, 71, 0.08);
+  }
+  .card-hover {
+    @apply transition-smooth hover:shadow-elevated hover:scale-105;
+  }
+  .badge-savings {
+    @apply inline-flex items-center px-2 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold;
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
